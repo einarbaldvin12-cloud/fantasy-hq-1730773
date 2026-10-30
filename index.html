@@ -1,0 +1,362 @@
+<!doctype html><html lang="is"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#100e1d"><title>Fantasy HQ — enginn er öruggur</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
+:root{--bg:#100e1d;--surface:#1c192e;--surface2:#252039;--purple:#ad87ff;--pink:#ff6d9b;--white:#f8f5ff;--muted:#aaa5c0;--line:#383149}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif}button{cursor:pointer;font:inherit}a{color:inherit}.wrap{max-width:1220px;margin:auto;padding:0 26px}
+header{border-bottom:1px solid var(--line);background:#151225}.top{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:22px 0}.brand{font-family:'Barlow Condensed',Impact,sans-serif;font-size:34px;font-weight:900;font-style:italic;letter-spacing:-.5px}.brand b{color:var(--pink)}.live{background:#28213c;color:#cfc6ea;border:1px solid #433759;padding:8px 12px;border-radius:30px;font-size:11px;font-weight:800;letter-spacing:1px}.live:before{content:'●';color:#a3f1a7;margin-right:7px}
+nav{display:flex;gap:28px;overflow:auto;white-space:nowrap;padding:18px 0}nav button{background:none;border:0;padding:0 0 9px;color:#aaa5bd;font-weight:800;font-size:13px;border-bottom:3px solid transparent}nav button.active,nav button:hover{color:white;border-bottom-color:var(--pink)}
+.hero{position:relative;display:grid;grid-template-columns:1.25fr .75fr;min-height:475px;background:radial-gradient(ellipse at 85% 25%,#563d86 0%,transparent 55%),linear-gradient(120deg,#2c1c4c,#171326 65%);border:1px solid #493c6b;border-radius:23px;overflow:hidden;margin-top:30px}.hero:before{content:'';position:absolute;inset:0;opacity:.25;background-image:linear-gradient(135deg,transparent 48%,#9c70f1 49%,transparent 50%);background-size:28px 28px;pointer-events:none}.hero-copy{position:relative;z-index:1;padding:clamp(30px,5vw,64px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.eyebrow{color:#f5a5c2;text-transform:uppercase;letter-spacing:2px;font-weight:800;font-size:12px}h1,h2,h3{font-family:'Barlow Condensed',Impact,sans-serif;text-transform:uppercase;font-weight:900;line-height:.96;letter-spacing:.2px}h1{font-size:clamp(57px,7.2vw,100px);margin:16px 0 20px;max-width:750px;font-style:italic}h2{font-size:42px;margin:0}h3{font-size:31px;margin:10px 0}.hero p{font-size:15px;line-height:1.8;color:#d7d0e5;max-width:490px}.hero-art{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}.hero-art:before{content:'';position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,#b487ff 0%,#6744a8 60%,transparent 70%);filter:blur(3px)}.hero-art:after{content:'FANTASY HQ';position:absolute;bottom:35px;right:-28px;font-family:'Barlow Condensed';font-weight:900;font-style:italic;font-size:100px;white-space:nowrap;color:#ffffff12;transform:rotate(-17deg)}.art-icon{position:relative;font-size:clamp(145px,21vw,280px);filter:drop-shadow(0 25px 12px #0e0b1a88);transform:rotate(-10deg)}.art-stamp{position:absolute;right:20px;bottom:25px;z-index:2;background:var(--pink);color:#22112d;font-weight:900;font-size:12px;padding:12px 16px;border-radius:8px;transform:rotate(5deg)}
+.button{border:0;background:var(--pink);color:#241224;border-radius:10px;padding:14px 22px;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.7px;box-shadow:0 8px 24px #ff6d9b25}.button:hover{background:#ff9cba}
+.section{padding-top:52px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:20px}.section-head p{font-size:12px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.feature{position:relative;min-height:240px;padding:24px;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;border:1px solid #473a65;background:linear-gradient(145deg,#34264f,#241b39)}.feature.lime{background:linear-gradient(135deg,#57429c,#342658)}.feature.dark{background:linear-gradient(135deg,#274c67,#1b2c48)}.feature.red{background:linear-gradient(135deg,#8d345c,#45213f)}.feature .emoji{position:absolute;right:12px;top:14px;font-size:78px;filter:drop-shadow(0 9px 8px #0005);transform:rotate(10deg)}.feature .kicker{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:1.5px;color:#e9c7fc;z-index:1}.feature .name{font-family:'Barlow Condensed';font-weight:900;font-style:italic;text-transform:uppercase;font-size:clamp(30px,3.6vw,47px);line-height:1;max-width:90%;overflow-wrap:anywhere;z-index:1}.feature .detail{font-size:12px;font-weight:700;color:#e1d5f3;z-index:1}
+.panel,.story{background:var(--surface);border:1px solid var(--line);border-radius:16px}.panel{padding:14px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:510px}th{color:#a6a0bd;text-transform:uppercase;letter-spacing:1px;font-size:10px;text-align:left;padding:15px 14px}td{padding:16px 14px;border-top:1px solid #39334a;font-size:13px}tbody tr:hover{background:#2b243d}tbody tr:first-child{background:#2c2443}td:first-child{font-weight:900;color:#b7a0ff;font-size:19px}td:last-child{font-weight:900;color:#fff;font-size:16px}.muted{color:var(--muted)}.report-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.story{padding:25px;min-height:230px}.story:first-child{background:linear-gradient(145deg,#5a2445,#281b35);border-color:#8c416b}.story p{font-size:14px;line-height:1.8;color:#d1cbdc}.story .stamp{color:var(--pink);text-transform:uppercase;letter-spacing:1.3px;font-size:11px;font-weight:900}.status{background:#29223b;border-left:3px solid var(--purple);padding:15px 18px;margin:15px 0 20px;color:#c9c2d8;font-size:12px;line-height:1.6;border-radius:5px}.hidden{display:none!important}footer{border-top:1px solid var(--line);margin-top:70px;padding:28px 0;color:#807b94;font-size:11px}
+@media(max-width:780px){.wrap{padding:0 16px}.top{padding:16px 0}.brand{font-size:27px}.hero{grid-template-columns:1fr;min-height:0}.hero-copy{padding:35px 26px}.hero-art{height:190px}.hero-art:before{width:250px;height:250px}.art-icon{font-size:155px}.art-stamp{bottom:10px}.cards,.report-grid{grid-template-columns:1fr}.feature{min-height:195px}.section{padding-top:36px}.section-head{align-items:flex-start}.section-head h2{font-size:35px}.section-head p{max-width:130px;text-align:right}nav{gap:22px}}
+
+.hero-art:before,.hero-art:after{display:none}.hero-photo{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:saturate(.85) contrast(1.12)}.hero-art{min-height:390px}.hero-art:after{display:block;content:"";position:absolute;inset:0;background:linear-gradient(90deg,#171326 0%,transparent 50%),linear-gradient(0deg,#17132699,transparent 50%)}.art-stamp{z-index:3}.feature{isolation:isolate;background:#251b39!important}.award-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.52;filter:saturate(.65) contrast(1.15);z-index:-2}.feature:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#100e1df2 0%,#100e1d9a 52%,#100e1d33 100%);z-index:-1}.feature .name{max-width:100%;text-shadow:0 3px 15px #0009}.feature .kicker,.feature .detail{text-shadow:0 2px 8px #000}.feature .emoji{display:none}@media(max-width:780px){.hero-art{min-height:220px;height:220px}.hero-photo{object-position:center 58%}}
+
+.story p{font-size:15px;line-height:1.85;letter-spacing:.005em;color:#e5e0ec;max-width:72ch}.story p .paragraph{display:block;margin:0 0 1.05em}.story p .paragraph:last-child{margin-bottom:0}.story{padding:clamp(22px,3vw,34px)}.report-grid{align-items:stretch}@media(max-width:680px){.story p{font-size:15px;line-height:1.75}}
+.report-grid{grid-template-columns:1fr;max-width:860px;gap:24px}.story{padding:clamp(28px,4vw,48px);min-height:0}.story p{font-size:16px;line-height:1.95;max-width:68ch;color:#f1eaf8}.story p .paragraph{margin-bottom:1.4em}.story h3{margin:16px 0 24px;font-size:38px}@media(max-width:680px){.story p{font-size:16px;line-height:1.85}}.story-body{max-width:68ch}.story-block{padding:0 0 18px;margin-bottom:23px;border-bottom:1px solid #ffffff1a}.story-block:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}.story-subhead{font-weight:850;color:#ff9cba;letter-spacing:.6px;font-size:12px;text-transform:uppercase;margin-bottom:12px}.story-paragraph{margin:0!important;line-height:1.85!important;font-size:16px!important;color:#f1edf7!important}.story:first-child .story-subhead{color:#ffb7cf}.feature-photo-banner{height:280px;position:relative;overflow:hidden;border-radius:19px;margin:18px 0 24px;background:#30213d}.feature-photo-banner img{width:100%;height:100%;object-fit:cover;opacity:.53;filter:contrast(1.15) saturate(.7)}.feature-photo-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#130e21e8,transparent)}.feature-photo-banner>div{position:absolute;z-index:2;left:clamp(24px,5vw,54px);bottom:32px;max-width:660px}.feature-photo-banner span,.power-rank-tag{font-size:12px;font-weight:900;letter-spacing:2px;color:#ff92b6}.feature-photo-banner h3{font-size:clamp(40px,6vw,68px);margin:12px 0}.feature-photo-banner p{line-height:1.7}.power-list{display:grid;gap:12px;max-width:980px}.power-row{display:grid;grid-template-columns:65px 1fr auto;align-items:center;gap:18px;padding:22px 25px;background:#211c32;border:1px solid #443854;border-radius:14px}.power-num{font:900 40px 'Barlow Condensed';color:#ff83ad}.power-row strong{display:block;font-size:17px;margin-bottom:7px}.power-row small{color:#bdb3cf}.power-points{font:900 30px 'Barlow Condensed';text-align:right}.power-points small{display:block;font:600 11px Inter;color:#bdb3cf}.shame-grid,.report-extras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:25px}.shame-card,.extra-card{border-radius:16px;overflow:hidden;background:#231c34;border:1px solid #55415f}.shame-card img,.extra-card img{width:100%;height:185px;object-fit:cover;filter:saturate(.65)}.shame-card>div,.extra-card>div{padding:24px}.shame-card h3,.extra-card h3{font-size:32px;line-height:1.04;margin:10px 0 16px}.shame-card p,.extra-card p{font-size:15px;line-height:1.85;color:#e2dce9}.extra-card .eyebrow{font-size:11px}.shame-banner img{object-position:center 60%}@media(max-width:680px){.shame-grid,.report-extras{grid-template-columns:1fr}.power-row{grid-template-columns:42px 1fr auto;padding:16px;gap:10px}.power-num{font-size:32px}.power-points{font-size:24px}.feature-photo-banner{height:270px}}
+.player-portraits{display:flex;gap:13px;flex-wrap:wrap;margin:18px 0 25px}.player-portrait{display:flex;align-items:center;flex-direction:column;justify-content:end;width:112px;min-height:142px;border:1px solid #584c70;border-radius:12px;background:linear-gradient(#41335b,#201a32);overflow:hidden}.player-portrait img{height:105px;width:96px;object-fit:contain;object-position:bottom}.player-portrait span{font-size:11px;font-weight:800;text-align:center;padding:9px 5px;color:#f9eefa}.shame-card .player-portrait{width:95px;min-height:125px}.shame-card .player-portrait img{height:87px;width:85px}
+:root{--pink:#ff628f;--purple:#b28aff;--bg:#0d0b16;--surface:#191527;--line:#393046}
+body{background:radial-gradient(circle at 90% 0%,#39234b55,transparent 34%),var(--bg)}
+header{position:sticky;top:0;z-index:50;background:#110e1def;backdrop-filter:blur(18px)}
+.brand b{background:linear-gradient(100deg,#ff70a5,#c5a2ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero{border-color:#9b69b05c;box-shadow:0 30px 75px #0007,0 0 85px #a552ec18}
+.hero h1{text-shadow:0 9px 32px #0008;letter-spacing:-2px}
+.hero .eyebrow{border:1px solid #f68bb750;background:#ff72a21d;padding:9px 12px;border-radius:30px}
+.button,.feature,.power-row{transition:transform .2s,box-shadow .2s}
+.button:hover,.feature:hover{transform:translateY(-3px);box-shadow:0 16px 32px #0006}
+.story{box-shadow:0 20px 50px #0003;position:relative}
+.story:before{content:"";height:3px;position:absolute;left:25px;right:25px;top:0;background:linear-gradient(90deg,#ff6d9b,#b487ff,transparent)}
+.story .stamp{display:inline-block;border:1px solid #ff6d9b60;padding:9px 13px;border-radius:50px;background:#ff6d9b18}
+.stat-ribbon{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0 5px}
+.stat-tile{background:linear-gradient(145deg,#252035,#161321);border:1px solid #544364;border-radius:14px;padding:19px 18px;min-width:0}
+.stat-tile small{display:block;color:#bcb0d1;font-size:10px;text-transform:uppercase;font-weight:900;letter-spacing:1.4px;margin-bottom:9px}
+.stat-tile strong{display:block;font:900 clamp(24px,3vw,38px) 'Barlow Condensed',sans-serif;overflow-wrap:anywhere;line-height:1.05}
+.stat-tile em{display:block;font-size:11px;font-style:normal;color:#aa9fbb;margin-top:8px}
+.hypebar{display:flex;gap:12px;align-items:center;margin-top:20px;flex-wrap:wrap}
+.hypebar button:not(.button),.report-tools button{border:1px solid #715781;background:#2a213b;color:white;border-radius:8px;font-weight:800;padding:12px 16px}
+.hypebar button:hover,.report-tools button:hover{background:#49305d}
+.report-tools{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 23px}
+.power-row:hover{transform:translateX(4px);background:#2d2340}
+@media(max-width:750px){.stat-ribbon{grid-template-columns:repeat(2,minmax(0,1fr))}.stat-tile{padding:15px}.hero h1{letter-spacing:-1px}.report-tools button{flex:1}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+.rival-micro{color:#ffb0ce;font-size:12px;margin-top:10px;line-height:1.7}.wrapped-title{padding:25px;background:linear-gradient(135deg,#672c65,#2d204b);border-radius:16px;margin:18px 0}.wrapped-title span{color:#ffb9d8;font-size:12px;font-weight:900;letter-spacing:1.5px}.wrapped-title h3{font-size:clamp(38px,6vw,64px)}.wrapped-title p{color:#ebddea}.wrapped-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.wrapped-verdict{font-size:18px;line-height:1.8;padding:16px 5px;color:#f4e6f8}@media(max-width:670px){.wrapped-stats{grid-template-columns:repeat(2,1fr)}#rivalry .power-row,#transfers .power-row{grid-template-columns:30px minmax(0,1fr) auto;gap:8px;padding:15px 10px}#rivalry .power-points,#transfers .power-points{font-size:21px}} </style></head><body><header><div class="wrap"><div class="top"><div class="brand">FANTASY <b>HQ</b></div><div class="live" id="live">SÆKI GÖGN</div></div><nav><button class="active" data-tab="home">Heim</button><button data-tab="league">Deildin</button><button data-tab="report">Vikuskítkast</button><button data-tab="rankings">Power Rankings</button><button data-tab="rivalry">Rivalry Center</button><button data-tab="transfers">Transfer Shame</button><button data-tab="wrapped">Fantasy Wrapped</button><button data-tab="shame">Skammarhöllin</button><button data-tab="advice">Gervigreindarráð</button><button data-tab="about">Um síðuna</button></nav></div></header>
+<main class="wrap"><section id="home"><div class="hero"><div class="hero-copy"><div class="eyebrow" id="weekLabel">Nýjustu úrslit úr deildinni</div><h1>ENGINN ER ÖRUGGUR.</h1><p id="heroText">Níu stjórar. Ein deild. Og alltaf einhver sem átti að láta liðið sitt í friði.</p><div class="hypebar"><button class="button" data-go="report">Sjá vikuskítkastið ↗</button><button id="shareHome" type="button">Deila deildinni ↗</button></div></div><div class="hero-art"><img class="hero-photo" src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1100&q=85&fit=crop" alt="Fótboltavöllur undir flóðljósum" loading="eager"><div class="art-stamp">SKAMMARKRÓKURINN</div></div></div>
+<div class="stat-ribbon"><div class="stat-tile"><small>Næsti deadline</small><strong id="countdown">Sæki…</strong><em id="deadlineLabel">Bíð eftir FPL</em></div><div class="stat-tile"><small>Fjöldi stjóra</small><strong id="managerCount">—</strong><em>Í deildinni</em></div><div class="stat-tile"><small>Forysta</small><strong id="leaderGap">—</strong><em id="leaderGapLabel">Milli efstu tveggja</em></div><div class="stat-tile"><small>Meðalstig vikunnar</small><strong id="avgWeek">—</strong><em id="avgLabel">Síðasta leikvika</em></div></div><div class="section"><div class="section-head"><h2>HEIÐUR & SKÖMM</h2><p>Stig úr síðustu loknu umferð</p></div><div class="cards"><div class="feature lime"><img class="award-photo" src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&q=85&fit=crop" alt="Fótbolti á velli" loading="lazy"><div class="kicker">Kóngurinn í deildinni</div><div class="name" id="leader">—</div><div class="detail" id="leaderDetail">Sæki stöðuna…</div></div><div class="feature dark"><img class="award-photo" src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&q=85&fit=crop" alt="Fótboltaleikur" loading="lazy"><div class="kicker">Stigahæstur vikunnar</div><div class="name" id="best">—</div><div class="detail" id="bestDetail">Bíð eftir úrslitum</div></div><div class="feature red"><img class="award-photo" src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=800&q=85&fit=crop" alt="Fótboltaleikvangur" loading="lazy"><div class="kicker">Skíta vikunnar</div><div class="name" id="worst">—</div><div class="detail" id="worstDetail">Enginn dæmdur án gagna</div></div></div></div>
+<div class="section"><div class="section-head"><h2>DEILDARTAFAN</h2><p>Staðan beint úr FPL</p></div><div class="panel table-wrap"><table><thead><tr><th>#</th><th>Stjóri</th><th>Lið</th><th>Stig</th></tr></thead><tbody id="miniTable"><tr><td colspan="4">Sæki stöðuna…</td></tr></tbody></table></div></div></section>
+<section id="league" class="hidden"><div class="section"><div class="section-head"><h2>DEILDIN</h2><p>Hverjir kunna þetta og hverjir þykjast?</p></div><div class="panel table-wrap"><table><thead><tr><th>#</th><th>Stjóri</th><th>Lið</th><th>Stig</th></tr></thead><tbody id="fullTable"></tbody></table></div></div></section>
+<section id="report" class="hidden"><div class="section"><div class="section-head"><h2 id="reportTitle">VIKUSKÍTKASTIÐ</h2><p>Engar afsakanir teknar gildar</p></div><div class="status" id="reportStatus">Sæki úrslit…</div><div class="report-tools"><button type="button" id="shareReport">↗ Deila skítkastinu</button><button type="button" id="toggleStories">− Fela umfjallanir</button></div><div class="report-grid" id="stories"></div><div class="report-extras" id="reportExtras"></div></div></section>
+<section id="rankings" class="hidden"><div class="section"><div class="section-head"><h2>POWER RANKINGS</h2><p>Hver er heitur og hver er í frjálsu falli?</p></div><div class="feature-photo-banner"><img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1400&q=85" alt="Fótboltavöllur"><div><span>FORMTÖFLAN</span><h3>ENGINN FÆR FRÍPASSA.</h3><p>Röðun eftir stigum síðustu þriggja loknu umferða. Ekki bara heildarstaðan.</p></div></div><div id="powerList" class="power-list"><div class="status">Sæki formið…</div></div></div></section>
+<section id="rivalry" class="hidden"><div class="section"><div class="section-head"><h2>RIVALRY CENTER</h2><p>Enginn er öruggur á hælunum á þér</p></div><div class="status" id="rivalryStatus">Sæki sætisbreytingar…</div><div id="rivalryBoard" class="power-list"></div></div></section>
+<section id="transfers" class="hidden"><div class="section"><div class="section-head"><h2>TRANSFER HALL OF SHAME</h2><p>Verstu viðskiptin, svart á hvítu</p></div><div class="status" id="transferStatus">Sæki staðfest skipti…</div><div id="transferBoard" class="power-list"></div></div></section>
+<section id="wrapped" class="hidden"><div class="section"><div class="section-head"><h2>FANTASY WRAPPED</h2><p>Persónulega sakaskráin þín</p></div><div class="panel" style="padding:24px;max-width:860px"><label for="wrappedTeam">Veldu stjóra</label><select id="wrappedTeam" style="display:block;width:100%;padding:13px;margin:12px 0;background:#302943;color:#fff;border:1px solid #755e8d;border-radius:9px"><option value="">Veldu stjóra</option></select><div class="status" id="wrappedStatus">Sæki gögn…</div><div id="wrappedBoard"></div></div></div></section>
+<section id="shame" class="hidden"><div class="section"><div class="section-head"><h2>HALL OF SHAME</h2><p>Glæsileg mistök lifa lengur en sigur</p></div><div class="feature-photo-banner shame-banner"><img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=1400&q=85" alt="Fótboltaleikvangur"><div><span>SKAMMARHÖLLIN</span><h3>ÓDAUÐLEG KLÚÐUR.</h3><p>Frægustu atvikin sem hafa verið staðfest í deildinni.</p></div></div><div class="shame-grid" id="shameGrid"></div><p class="muted" style="margin-top:24px">Transfer Hall of Shame inniheldur staðfest skipti þessarar deildar.</p></div></section>
+<section id="advice" class="hidden"><div class="section"><h2>GERVIGREINDARRÁÐ</h2><p class="muted">Sjálfvirk gagnagreining úr Fantasy Premier League — ekki lifandi AI-spjall.</p><div class="panel" style="padding:28px;max-width:850px"><label for="adviceTeam">Veldu lið</label><select id="adviceTeam" style="display:block;padding:14px;margin:15px 0;background:#302943;color:white;border:1px solid #8e76af;border-radius:8px;width:100%"><option value="">Veldu stjórnanda</option></select><button class="button" id="adviceButton">Fá ráð</button><div id="adviceOutput" style="margin-top:24px;line-height:1.9"></div></div></div></section><section id="about" class="hidden"><div class="section"><div class="section-head"><h2>UM RUGLIÐ</h2></div><div class="panel" style="padding:28px;line-height:1.8"><h3>Fantasy er alvarlegt. Við erum það ekki.</h3><p>Óopinber síða fyrir Nova Fantasy-deildina. Stig og sæti koma úr Fantasy Premier League.</p><p>Þegar leikviku lýkur uppfærist vikuskítkastið sjálfkrafa við næstu heimsókn. Brandararnir eru til skemmtunar, ekki fréttir um raunverulegt fólk.</p><p class="muted">Engin GW 6 ritstjórnaruppgjör úr annarri deild eru hér. Fyrir síðari leikvikur notar síðan sjálfvirkt stigauppgjör, en nákvæm greining á skiptum og fyrirliðavali er enn í vinnslu. Sjálfstæðar tímasettar útgáfur og varanlegt skjalasafn eru ekki enn virk.</p></div></div></section></main><footer><div class="wrap">FANTASY HQ · DEILD 1730773 · ÓOPINBERT · ENGINN STJÓRI SKAÐAÐIST VIÐ GERÐ ÞESSARAR SÍÐU</div></footer>
+<script>
+const $=s=>document.querySelector(s);
+const selectedLeague='1730773';
+const alternateLeague=true;
+if(alternateLeague){document.title='Fantasy HQ · Deild 1730773';document.querySelector('.brand').innerHTML='FANTASY <b>HQ</b>';document.querySelector('.art-stamp').textContent='DEILD 1730773';document.querySelector('.hero-copy h1').textContent='ENGINN SLEPPUR.';document.querySelector('footer .wrap').textContent='FANTASY HQ · DEILD 1730773 · ÓOPINBERT';document.querySelector('#about .panel p').textContent='Óopinber Fantasy HQ-síða fyrir deild 1730773. Úrslit og stig koma úr FPL.'}
+
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const jokes=[
+ n=>n+' mætti í umferðina eins og maður sem gleymdi að stilla vekjaraklukkuna en ákvað samt að mæta í vinnuna á morgun.',
+ n=>'Þetta var svo dapurt hjá '+n+' að meira að segja sjálfskipting hefði beðið um handstýringu.',
+ n=>n+' fór inn í leikvikuna með vonir. Vonirnar fóru út um bakdyrnar og skildu eftir reikninginn.',
+ n=>'Það er til slæm umferð. Svo er það sem '+n+' var að gera. Þetta er orðið sérstakt fræðasvið.',
+ n=>n+' átti plan. Það eina sem vantaði var að planið hefði nokkurt samband við raunveruleikann.',
+ n=>'Þegar '+n+' opnaði FPL-appið var það ekki til að fagna. Það var til að kanna umfang tjónsins.'
+];
+let currentRows=[],finishedGw=null, countdownTarget=null;
+function updateCountdown(){if(!countdownTarget)return;const d=countdownTarget-Date.now(),e=$('#countdown');if(!e)return;if(d<=0){e.textContent='Deadline liðinn';return}const days=Math.floor(d/86400000),hours=Math.floor(d%86400000/3600000),mins=Math.floor(d%3600000/60000);e.textContent=(days?days+'d ':'')+hours+'klst '+mins+'m'}
+async function shareLink(report){const url=location.origin+location.pathname+location.search+(report?'#report':'#home');try{if(navigator.share)await navigator.share({title:'Nova Fantasy HQ',url});else if(navigator.clipboard){await navigator.clipboard.writeText(url);alert('Hlekkur afritaður!')}else prompt('Afritaðu hlekkinn:',url)}catch(e){if(e.name!=='AbortError')prompt('Afritaðu hlekkinn:',url)}}
+function tab(id){if(['home','report','league','rankings','rivalry','transfers','wrapped','shame','advice','about'].includes(id))history.replaceState(null,'','#'+id);document.querySelectorAll('main>section').forEach(x=>x.classList.toggle('hidden',x.id!==id));document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>tab(b.dataset.tab)));document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>tab(b.dataset.go)));
+$('#shareHome').addEventListener('click',()=>shareLink(false));$('#shareReport').addEventListener('click',()=>shareLink(true));$('#toggleStories').addEventListener('click',()=>{const hidden=$('#stories').classList.toggle('hidden');$('#toggleStories').textContent=hidden?'+ Sýna umfjallanir':'− Fela umfjallanir'});window.addEventListener('hashchange',()=>{const id=location.hash.slice(1);if(document.getElementById(id))tab(id)});if(location.hash&&document.getElementById(location.hash.slice(1)))tab(location.hash.slice(1));setInterval(updateCountdown,60000);
+function table(rows){return rows.map((x,i)=>'<tr><td>'+(i+1)+'</td><td><strong>'+esc(x.player_name)+'</strong></td><td class="muted">'+esc(x.entry_name)+'</td><td>'+Number(x.total||0).toLocaleString('is-IS')+'</td></tr>').join('')}
+async function json(url){const r=await fetch(url);if(!r.ok)throw Error('HTTP '+r.status);return r.json()}
+const gw6Stories=[
+ ['SKÍTA VIKUNNAR','Aron Smárason — Goatsmara','Það er eitt að eiga slæma umferð. Það er allt annað að setjast niður, skoða alla möguleikana og velja svo nákvæmlega þá leið sem getur farið mest í fokking vaskinn. Aron endaði með 43 stig, en það er ekki einu sinni það versta. Hann setti fyrirliðabandið á Kayode sem skilaði núll stigum. Núll. Á meðan sat João Pedro sem varafyrirliði með 12 stig og horfði á þessa vitleysu úr fjarlægð. Og eins og það væri ekki nóg ákvað Aron að selja Rice fyrir Schade og tapaði sex stigum á þeirri snilld. Þetta er ekki bara óheppni; þetta er heill helvítis pakki af ákvörðunum sem allar bentu í ranga átt. Það þarf eiginlega sérstakan hæfileika til að finna svona margar leiðir til að skjóta sig í fótinn í sömu leikviku. Aron fær því Skítu vikunnar, ekki af því hann var með fæst stig, heldur af því að hann vann svo fjandi hart fyrir þessum titli.'],
+ ['TITANIC-WILDCARDIÐ','Ester Gunnarsdóttir — Robben Hood','Wildcard er stóra rauða hnappinum sem maður ýtir á þegar allt á að breytast. Þú færð að endurraða liðinu, losa þig við vandamálin og byrja með hreint borð. Ester ákvað að nú væri rétti tíminn til að sjósetja nýja útgáfu af Robben Hood. Það eina sem vantaði var að athuga hvort ísjakinn væri beint fyrir framan skipið. Útkoman varð 41 stig, lægsta skor umferðarinnar. Þetta er það sem gerir söguna svo fallega hörmulega: það var ekki gamla liðið sem dró hana niður heldur nýja, glansandi liðið sem átti að bjarga öllu. Wildcardið fór út með lúðrablæstri og kom aftur með björgunarvesti. Titanic hafði að minnsta kosti hljómsveit sem spilaði til enda.'],
+ ['VIÐSKIPTI VIKUNNAR','Einar Baldvinsson — Það er bara Tzolis','Einar ákvað að það væri kominn tími til að hrista upp í hópnum. Tzolis var látinn fara og Groß kom inn. Á blaði getur svona tilfærsla litið út eins og úthugsuð viðskipti. Þegar stigin voru talin reyndist munurinn hins vegar sex stig í vitlausa átt. Það er alveg nógu pirrandi eitt og sér, en svo kemur besta smáatriðið: liðið heitir enn Það er bara Tzolis. Maðurinn sem liðið er nefnt eftir var sem sagt rekinn úr liðinu. Þetta er eins og að skilja við einhvern, halda áfram að nota nafnið hans á dyrabjöllunni og láta svo eins og ekkert hafi gerst. Viðskipti vikunnar fyrir að gera liðið verra og vörumerkið enn ruglingslegra.'],
+ ['HETJA VIKUNNAR','Daniel Alvin — ALVIN FC','Daniel mætti til leiks og hirti 86 stig. Á meðan aðrir voru að útskýra hvað hefði getað gerst var hann einfaldlega búinn að safna stigunum. Með þessari umferð færðist hann upp í 423 stig samtals og var aðeins 14 stigum á eftir Einari Hunfjord, sem sat í efsta sætinu. Það er óþægileg staða fyrir þann sem leiðir deildina: að vera með forskot, en heyra samt andardráttinn frá næsta manni. Daniel vann vikuna sannfærandi og það sem gerir þetta enn verra fyrir hina er að hann gerði það ekki einu sinni fullkomlega. Hann átti enn stig á bekknum.'],
+ ['FYRIRLIÐAVALIÐ','Bjössi Halldórsson — Saka me Dijk','Það voru ekki allir að giska blindandi á fyrirliðann þessa vikuna. Bjössi setti bandið á Rogers og fékk 18 stig fyrir það val. Hann nýtti líka Free Hit og endaði með 68 stig, sem er ansi þokkaleg uppskera. Á meðan sumir voru að afhenda núll stig með fyrirliðabandinu var Bjössi að nýta það eins og það væri í raun margfaldari. Þetta var ekki einhver flugeldasýning sem vann alla vikuna, heldur nákvæmlega sú tegund af skynsamlegri ákvörðun sem gerir hina pirraða. Það er erfitt að gera grín að manni sem greinilega las leiðbeiningarnar.'],
+ ['BEKKJARSETAN','Daniel Alvin — ALVIN FC','Hvernig er hægt að fá 86 stig og samt finna eitthvað til að naga sig yfir? Daniel fann leiðina. Tíu stig sátu á bekknum á meðan hann vann umferðina. Fyrir flesta væri það ágætis ástæða til að velta sér upp úr því sem hefði getað verið. Daniel þarf hins vegar að gera það með sigurinn í vasanum, sem er eiginlega enn meira pirrandi fyrir alla aðra. Hann fékk flest stig og á samt efni í kvörtun. Þetta er Fantasy-útgáfan af því að vinna happdrættið og vera fúll yfir að hafa ekki keypt tvo miða.']
+];
+function paragraphs(value){
+ const txt=String(value||'').trim();
+ const sentences=txt.match(/[^.!?]+[.!?]+|[^.!?]+$/gu)||[txt];
+ if(sentences.length<4)return '<p class="story-paragraph">'+esc(txt)+'</p>';
+ const first=Math.max(1,Math.ceil(sentences.length/3));
+ const second=Math.max(first+1,Math.ceil(sentences.length*2/3));
+ const groups=[sentences.slice(0,first),sentences.slice(first,second),sentences.slice(second)].filter(x=>x.length);
+ return groups.map((part,i)=>'<div class="story-block">'+(i===0?'<div class="story-subhead">Hvað gerðist?</div>':i===groups.length-1?'<div class="story-subhead">Dómur vikunnar</div>':'<div class="story-subhead">Og svo fór þetta versnandi…</div>')+'<p class="story-paragraph">'+esc(part.join(' ').trim())+'</p></div>').join('');
+}
+function renderGw6(){
+ $('#reportTitle').textContent='VIKUSKÍTKASTIÐ / GW 6';
+ $('#weekLabel').textContent='LEIKVIKA 6 · SLYSIN SEM ENGINN GLEYMDI';
+ $('#heroText').textContent='Daniel rúllaði yfir deildina. Ester sigldi wildcardinu á ísjaka. Aron gerði Kayode að fyrirliða og afhenti okkur Skítu vikunnar á silfurfati.';
+ $('#worst').textContent='Aron Smárason';
+ $('#worstDetail').textContent='43 stig · Skíta vikunnar fyrir ákvarðanir, ekki lægsta stigaskor';
+ $('#stories').innerHTML=gw6Stories.map(x=>'<article class="story"><div class="stamp">'+esc(x[0])+'</div><h3>'+esc(x[1])+'</h3>'+playerPortraits(x[2])+'<div class="story-body">'+paragraphs(x[2])+'</div></article>').join('');
+ $('#reportStatus').textContent='Sérstakt ritstjórnaruppgjör GW 6. Skíta vikunnar er valin út frá klúðri og ákvörðunum, ekki bara lægsta stigaskori. Ester fékk fæst stig (41), en Aron fékk verðlaunin.';
+}
+async function weeklyAnalysis(rows,boot,gw){
+ const names=new Map((boot.elements||[]).map(p=>[p.id,p.web_name]));
+ const live=await json('/api/fpl?type=live&event='+gw);
+ const points=new Map((Array.isArray(live.elements)?live.elements:Object.values(live.elements||{})).map(p=>[p.id,p.stats?.total_points||0]));
+ const detail=await Promise.all(rows.map(async r=>{
+  const id=r.entry;
+  const [pick,transferResult,historyResult]=await Promise.all([
+   json('/api/fpl?type=entry&entry='+id+'&event='+gw),
+   json('/api/fpl?type=transfers&entry='+id).catch(()=>[]),
+   json('/api/fpl?type=history&entry='+id).catch(()=>({chips:[]}))
+  ]);
+  const transfers=Array.isArray(transferResult)?transferResult:[];
+  const history=historyResult||{};
+  const list=pick.picks||[],captain=list.find(p=>p.is_captain);
+  const best=list.filter(p=>p.position<=11).sort((a,b)=>(points.get(b.element)||0)-(points.get(a.element)||0))[0];
+  const bench=list.filter(p=>p.position>11).reduce((n,p)=>n+(points.get(p.element)||0),0);
+  const moves=transfers.filter(t=>t.event===gw);
+  const diff=moves.reduce((n,t)=>n+(points.get(t.element_in)||0)-(points.get(t.element_out)||0),0);
+  const missed=best&&captain?Math.max(0,(points.get(best.element)||0)-(points.get(captain.element)||0)):0;
+  const chip=pick.active_chip||(history.chips||[]).find(c=>c.event===gw)?.name;
+  return {name:r.player_name,score:pick.entry_history.points,captain,best,bench,moves,diff,missed,chip,badness:missed*2+Math.max(0,-diff)+bench*.5+(chip==='wildcard'&&pick.entry_history.points<45?12:0)};
+ }));
+ const by=(key)=>[...detail].sort((a,b)=>b[key]-a[key])[0];
+ const name=id=>names.get(id)||'óþekktur leikmaður';
+ const worst=by('badness'),winner=by('score'),bench=by('bench');
+ const transfers=[...detail].filter(d=>d.moves.length).sort((a,b)=>a.diff-b.diff)[0];
+ const captain=by('missed'),chip=detail.find(d=>d.chip);
+ const scoreLine=d=>d.name+' landaði '+d.score+' stigum í GW '+gw+'. ';
+ const captainText=d=>d.captain?'Fyrirliðabandið var sett á '+name(d.captain.element)+' ('+(points.get(d.captain.element)||0)+' hrá stig). '+(d.missed?'Í byrjunarliðinu var '+name(d.best.element)+' með '+(points.get(d.best.element)||0)+' hrá stig; '+d.missed+' stiga munur á mögulegri margföldun þegar horft er til baka. ':'Enginn í byrjunarliðinu var með fleiri hrá stig en fyrirliðinn. '):'Skráð fyrirliðaval fannst ekki. ';
+ const transferText=d=>d.moves.length?d.moves.map(t=>name(t.element_out)+' út, '+name(t.element_in)+' inn').join('; ')+'. Hrástigamunurinn í þessari einu viku: '+(d.diff>0?'+':'')+d.diff+'. ':'Engin skráð leikmannaskipti í þessari viku. ';
+ const spice=[
+ 'Þetta var Fyre Festival í takkaskóm: flott auglýsing, engin tónlist, ekkert vatn og einhver fær samt reikninginn.',
+ 'Þetta minnti á lokaseríu Game of Thrones: margra vikna undirbúningur og svo gjörsamlega fokking óskiljanleg ákvörðun.',
+ 'Michael Scott hefði kallað þetta „strategic leadership“ og Dwight Schrute hefði sent inn formlega kvörtun. Hvorugur hefði haft rangt fyrir sér.',
+ 'Þetta var eins og að láta Jar Jar Binks stjórna Jedi-ráðinu. Allir sáu hættuna nema sá sem hélt um stýrið.',
+ 'Roy Keane hefði ekki einu sinni hækkað róminn. Hann hefði bara horft í myndavélina, sagt „embarrassing“ og gengið út.',
+ 'Þetta var Eurovision-framlag án söngs, ljósa eða lags. Samt var einhver svo helvíti bjartsýnn að hann pantaði konfetti.',
+ 'Ef þetta væri The Bear væri Gordon Ramsay kominn inn um dyrnar til að öskra á kokkinn sem hélt að örbylgjuofn væri Michelin-stjarna.',
+ 'Þetta var Manchester United-uppbygging á hraðspóli: nýtt plan, nýjar vonir og sama fokking ráðaleysið á töflunni.'
+ ];
+ const praise=[
+ 'Þetta var Beyoncé á Coachella: aðrir keyptu miða, en aðeins einn átti fokking sviðið.',
+ 'Þetta var Messi gegn Frakklandi í HM-úrslitunum 2022: ótrúleg pressa, aðalhlutverkið og verðlaunin beint í fangið.',
+ 'Þetta var Michael Jordan í The Last Dance. Hinir héldu að þeir væru í keppni; þessi var að taka upp heimildarmynd um eigin yfirburði.',
+ 'Þetta var Gandalf að mæta við dögun í Helms Deep. Restin af deildinni var enn að öskra á hjálp þegar riddaraliðið kom.',
+ 'Þetta var Kendrick Lamar í rappeinvígi: einn mætti með rök, takt og yfirburði, hinir með útskýringar eftir á.',
+ 'Þetta var Max Verstappen í sínum bestu ham: ljósin slokknuðu og allir hinir kepptu bara um annað sætið.',
+ 'Þetta var Succession nema án allra mistakanna: einn tók krúnuna, hinir stóðu eftir og rifust um kaffivélina.'
+ ];
+ const flavor=(arr,d)=>arr[(gw+Array.from(String(d.name)).reduce((n,ch)=>n+ch.charCodeAt(0),0))%arr.length];
+ const roast=d=>d.missed>=8?'Maðurinn hafði stjörnu beint fyrir framan nefið en afhenti bandið öðrum. Þetta er eins og að hafa Messi á sviðinu og biðja plötusnúðinn að taka vítaspyrnuna. Hvaða fokking geðþóttaákvörðun var þetta? ':d.diff<=-6?'Skiptin fóru beint í mínus. Það er eins og að skipta á Ferrari og ryðguðum innkaupakerrum, kveikja á myndavélinni og kalla þetta snilldarviðskipti. Helvítis meistaraverk, bara á röngum enda. ':d.bench>=12?'Stigin lágu á bekknum eins og Beyoncé hefði verið bókuð í hálfleik en einhver hefði slökkt á hljóðkerfinu. Til hvers að ráða stjörnurnar ef þær mega ekki fokking spila? ':'Þetta var ekki heimsendir, en samt nógu dapurt til að Netflix gæti keypt réttinn að heimildarmyndinni „Hvernig á ekki að stjórna Fantasy-liði“. ';
+ const stories=[
+ ['SKÍTA VIKUNNAR',worst.name,
+ scoreLine(worst)+'Látið ruslabílinn bakka inn á rauða dregilinn. Hér kemur stjórnandinn sem gerði leikvikuna að eigin hörmungarmynd. Skíta vikunnar er ekki bara sá með lægsta skorið: hún fer til þess sem náði að fokka upp flestum eigin ákvörðunum. Þetta er virkilega sérstakt afrek í rangri átt. '+
+ captainText(worst)+'Á leikmannamarkaðnum: '+transferText(worst)+'Á bekknum sátu '+worst.bench+' hrá stig. Ekki er sjálfgefið að þau hefðu öll getað komið inn vegna uppstillingar og sjálfvirkra innáskiptinga, en þetta lítur samt út eins og CSI: Fantasy, nema sökudólgurinn er búinn að skrifa nafnið sitt á vettvanginn. '+
+ roast(worst)+flavor(spice,worst)+' Dómurinn: '+worst.name+' fær skítukórónuna, afhenta í ruslapoka með hljóðrás úr Curb Your Enthusiasm. Þetta er dómur yfir fyrirliðavali, skiptum og bekkjarsetu — ekki bara yfir lélegri tölu. Þvílíkt andskotans klúður.'],
+ ['HETJA VIKUNNAR',winner.name,
+ scoreLine(winner)+'ALLIR Á FÆTUR. Slökkvið á kaffivélinni, leggið frá ykkur samlokuna og sýnið smá fokking virðingu. Hetja vikunnar kom ekki til að vera með — hún kom til að eiga þessa helgi. Á meðan hinir sömdu afsakanir eins og lélegir handritshöfundar fór '+winner.name+' einfaldlega út og sótti mest stig allra. '+
+ flavor(praise,winner)+' '+captainText(winner)+'Þetta er ekki einhver eftiráspeki úr kaffistofunni: '+winner.score+' stig standa svart á hvítu. Enginn getur röflað þau í burtu. '+
+ 'Reisið styttu af '+winner.name+' við kaffistofuna, gefið viðkomandi besta stólinn og látið Champions League-stefið hljóma við hverja innkomu. Hetja vikunnar á að vera óþolandi montin fram að næsta deadline. Þetta var fokking stórbrotið.'],
+ ['FYRIRLIÐASLYSIÐ',captain.name,
+ scoreLine(captain)+captainText(captain)+(captain.missed?
+ 'Þetta er eins og að ráða Cillian Murphy í Oppenheimer en láta manninn sem sér um samlokurnar leika aðalhlutverkið. '+captain.missed+' stig af mögulegum mun á margföldun, sé miðað við stigahæsta mann byrjunarliðsins. Fokk hvað það getur sviðið. ':
+ 'Hér er samt ekki hægt að búa til stórslys úr engu: stigahæsti maður byrjunarliðsins var ekki með fleiri hrá stig en fyrirliðinn. Dómnefndin verður að finna aðra ástæðu til að æsa sig. ')+
+ 'Þetta er eftirásamanburður á hrástigum, ekki fullyrðing um að stig hafi raunverulega tapast; reglur um varafyrirliða og innáskiptingar geta skipt máli.'],
+ ['BEKKJARDRAMAIÐ',bench.name,
+ scoreLine(bench)+'Á bekknum lágu '+bench.bench+' hrá stig og horfðu á ruglið úr fjarlægð. Þetta er eins og að eiga miða í fremstu röð á Oasis-endurkomuna, mæta á staðinn og setjast sjálfviljugur inni á klósetti með eyrnatappa. '+
+ 'Það er þó ekki sanngjarnt að kalla öll þessi stig töpuð: lögleg uppstilling og sjálfvirkar innáskiptingar geta breytt því hvað hefði fengist. En tilfinningin er samt sú sama — þú áttir stjörnurnar, borgaðir fyrir stjörnurnar og settir þær sjálfur í helvítis skammarkrókinn. '+
+ 'Til hamingju, '+bench.name+'. Þetta er bekkjarspeki á heimsmælikvarða.'],
+ ];
+ if(transfers)stories.push(['VIÐSKIPTARANNSÓKNIN',transfers.name,
+ scoreLine(transfers)+transferText(transfers)+
+ (transfers.diff<0?'Þetta eru viðskipti sem myndu fá kauphallarbjölluna til að hringja í neyðarlínuna. Að eyða skiptum til að versna stöðuna strax er eins og að selja Apple-hlutabréf fyrir Blockbuster-gjafabréf og halda svo TED-fyrirlestur um fjármálasnilld sína. Djöfulsins bisness. ':
+ 'Þetta voru að minnsta kosti ekki tapskipti samkvæmt hrástigum vikunnar. Við ætlum samt ekki að skrifa ævisögu um snilling eftir eina helgi. ')+
+ 'Athugið: þetta mælir aðeins hrástig inn og út í GW '+gw+', ekki framtíðarvirði leikmanna, stigahögg eða hvort skipti hafi verið réttlætanleg til lengri tíma. Við dæmum helgina, ekki fimm ára áætlun.']);
+ if(chip)stories.push(['CHIP-RÉTTARHÖLDIN',chip.name,
+ scoreLine(chip)+chip.name+' ýtti á '+chip.chip+' og gerði þar með venjulega helgi að frumsýningu á eigin stórmynd. Þetta átti að vera Oppenheimer. Nú bíðum við eftir að sjá hvort þetta var frekar Sharknado. '+
+ 'Útkoman: '+chip.score+' stig. Það er staðreyndin. Við getum hins vegar ekki fullyrt að chipið hafi borgað sig miðað við að geyma það — slíkur samanburður hefur ekki verið reiknaður. '+
+ 'En þegar þú kveikir á flugeldunum sjálfur þarftu líka að þola að öll kaffistofan fylgist með sprengingunni.']);
+ return stories;
+}
+function renderReport(entries,gw){const sorted=[...entries].sort((a,b)=>b.points-a.points),best=sorted[0],worst=sorted.at(-1);
+$('#best').textContent=best.name;$('#bestDetail').textContent=best.points+' stig í GW '+gw;
+$('#worst').textContent=worst.name;$('#worstDetail').textContent=worst.points+' stig í GW '+gw;
+$('#reportTitle').textContent='Skítkast vikunnar / GW '+gw;
+$('#weekLabel').textContent='LEIKVIKA '+gw+' · UPPGJÖRI LOKIÐ';
+$('#heroText').textContent=best.name+' hirti '+best.points+' stig. '+worst.name+' náði '+worst.points+'. Þetta er munurinn á því að mæta til leiks og að vera bara skráður í deildina.';
+const gap=best.points-worst.points,choice=jokes[gw%jokes.length];
+const stories=[
+ ['💩 SKÍTA VIKUNNAR',worst.name,choice(worst.name)+' '+worst.points+' stig. '+gap+' stigum á eftir besta manni vikunnar. Það er ekki gott að vera svona langt frá veislunni þegar maður er sjálfur á gestalistanum.'],
+ ['🏆 HETJA VIKUNNAR',best.name,best.points+' stig. '+best.name+' tók þessa umferð og lét restina um að finna afsakanir. Það er óþolandi þegar einhver er bæði með sjálfstraust og tölur til að styðja það.'],
+ ['📉 NEÐST Í DEILDINNI',currentRows.at(-1).player_name,currentRows.at(-1).player_name+' situr í neðsta sæti með '+currentRows.at(-1).total+' stig samtals. Það er enn hægt að snúa þessu við. Það er líka hægt að vinna í lottó.'],
+ ['🔥 VIKUMUNURINN','ÞETTA ER EKKI JAFNT',gap+' stig skildu að hæsta og lægsta skor umferðarinnar. Ef þetta væri starfsmannafundur væri einhver búinn að bóka sérstakt frammistöðusamtal.']
+];
+$('#stories').innerHTML=stories.map(s=>'<article class="story"><div class="stamp">'+esc(s[0])+'</div><h3>'+esc(s[1])+'</h3><p>'+esc(s[2])+'</p></article>').join('');
+$('#reportStatus').textContent='Uppgjör GW '+gw+' byggir á stigum sem FPL hefur skráð fyrir lokna leikviku. Brandararnir eru sjálfvirkir; einstök leikmannaskipti eru ekki fullyrt án gagna.';
+}
+async function start(){try{
+const [league,boot]=await Promise.all([json('/api/fpl?type=league&league='+selectedLeague),json('/api/fpl?type=bootstrap')]);
+currentRows=league.standings?.results||[];window.fplBoot=boot;$('#adviceTeam').innerHTML='<option value="">Veldu stjórnanda</option>'+currentRows.map(r=>'<option value="'+r.entry+'">'+esc(r.player_name)+'</option>').join('');$('#wrappedTeam').innerHTML='<option value="">Veldu stjórnanda</option>'+currentRows.map(r=>'<option value="'+r.entry+'">'+esc(r.player_name)+'</option>').join('');if(!currentRows.length)throw Error('Engin lið fundust');
+const content=table(currentRows);$('#miniTable').innerHTML=content;$('#fullTable').innerHTML=content;
+$('#managerCount').textContent=String(currentRows.length);$('#leaderGap').textContent=currentRows.length>1?String((currentRows[0].total||0)-(currentRows[1].total||0))+' stig':'—';$('#leaderGapLabel').textContent=currentRows.length>1?currentRows[0].player_name+' á undan '+currentRows[1].player_name:'Enginn keppinautur';const upcoming=(boot.events||[]).find(e=>Date.parse(e.deadline_time)>Date.now());if(upcoming){countdownTarget=Date.parse(upcoming.deadline_time);$('#deadlineLabel').textContent='GW '+upcoming.id+' · '+new Date(countdownTarget).toLocaleString('is-IS',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',timeZone:'Atlantic/Reykjavik'});updateCountdown()}else{$('#countdown').textContent='Óskráð';$('#deadlineLabel').textContent='Enginn nýr deadline skráður'}$('#leader').textContent=currentRows[0].player_name;$('#leaderDetail').textContent=currentRows[0].total+' stig samtals';$('#live').textContent='FPL TENGT';
+const started=(boot.events||[]).filter(e=>Date.parse(e.deadline_time)<=Date.now());
+const completed=started.at(-1)||(boot.events||[]).filter(e=>e.finished).at(-1);
+if(!completed){$('#reportStatus').textContent='Engin lokin leikvika skráð hjá FPL enn.';return}
+finishedGw=completed.id;
+const provisional=!(completed.finished&&completed.data_checked);
+$('#weekLabel').textContent='LEIKVIKA '+completed.id+(provisional?' · BRÁÐABIRGÐAUPPGJÖR':' · LOKIÐ');
+const ids=currentRows.map(x=>x.entry).filter(Boolean);
+const results=await Promise.allSettled(ids.map(id=>json('/api/fpl?type=entry&entry='+encodeURIComponent(id)+'&event='+completed.id)));
+const entries=results.map((r,i)=>r.status==='fulfilled'?{name:currentRows[i].player_name,points:r.value.entry_history?.points,entry:ids[i]}:null).filter(x=>x&&Number.isFinite(x.points));
+if(entries.length){$('#avgWeek').textContent=(entries.reduce((n,x)=>n+x.points,0)/entries.length).toFixed(1).replace('.',',');$('#avgLabel').textContent='GW '+completed.id+(entries.length!==ids.length?' · ófull gögn':'')}if(entries.length!==ids.length){$('#reportStatus').textContent='Ekki tókst að sækja stig allra stjóranna fyrir GW '+completed.id+'. Enginn fær Skítu vikunnar fyrr en öll gögn eru komin.';$('#weekLabel').textContent='GW '+completed.id+' · BÍÐ EFTIR ÖLLUM GÖGNUM';return}
+if(false)showShame();else{$('#shameGrid').innerHTML='<div class="status">Þessi deild notar eigin Transfer Hall of Shame.</div>';document.querySelector('#shame .muted').textContent='Skoðaðu Transfer Hall of Shame fyrir gögn þessarar deildar.'}loadNewFeatures(completed.id).catch(()=>{});showPowerRankings(completed.id).catch(()=>{$('#powerList').textContent='Ekki tókst að sækja Power Rankings.'});
+if(false){$('#best').textContent='Daniel Alvin';$('#bestDetail').textContent='86 stig í GW 6';renderGw6();showExtras(gw6Stories,6)}else{try{const stories=await weeklyAnalysis(currentRows,boot,completed.id);$('#stories').innerHTML=stories.map(x=>'<article class="story"><div class="stamp">'+esc(x[0])+'</div><h3>'+esc(x[1])+'</h3>'+playerPortraits(x[2])+'<div class="story-body">'+paragraphs(x[2])+'</div></article>').join('');$('#reportTitle').textContent='VIKUSKÍTKASTIÐ / GW '+completed.id;$('#worst').textContent=stories[0][1];$('#worstDetail').textContent='Mesta ákvörðunarklúðrið';$('#best').textContent=stories[1][1];$('#reportStatus').textContent=(provisional?'BRÁÐABIRGÐAUPPGJÖR: GW '+completed.id+' er ekki enn staðfest hjá FPL. Stig og dómar geta breyst. ':'')+'Sjálfvirk greining á fyrirliðavali, leikmannaskiptum, bekk og chip-notkun.';showExtras(stories,completed.id)}catch(e){renderReport(entries,completed.id);$('#reportExtras').innerHTML='';$('#reportStatus').textContent=(provisional?'BRÁÐABIRGÐAUPPGJÖR: Stig geta breyst. ':'')+'Nákvæm greining ekki tiltæk; sýni stigauppgjör.'}}
+}catch(e){$('#live').textContent='TENGING BILAÐI';$('#reportStatus').textContent='Ekki tókst að sækja nýjustu FPL-gögn. '+e.message;$('#miniTable').innerHTML='<tr><td colspan="4">Ekki náðist samband við FPL. Prófaðu að endurhlaða síðuna.</td></tr>';$('#heroText').textContent='Við náum ekki sambandi við FPL eins og er. Engin stig eða verðlaun verða skálduð.'}}
+
+async function getAdvice(){
+ const id=Number($('#adviceTeam').value),out=$('#adviceOutput');
+ if(!id){out.textContent='Veldu lið fyrst.';return}
+ out.textContent='Sæki upplýsingar um liðið…';
+ try{
+ const boot=window.fplBoot,gw=boot.events.find(e=>e.is_current)?.id||finishedGw;
+ const data=await json('/api/fpl?type=entry&entry='+id+'&event='+gw);
+ const all=new Map(boot.elements.map(p=>[p.id,p]));
+ const picks=(data.picks||[]).map(p=>({...p,info:all.get(p.element)})).filter(p=>p.info);
+ const captain=picks.find(p=>p.is_captain);
+ const form=[...picks].sort((a,b)=>Number(b.info.form||0)-Number(a.info.form||0))[0];
+ const doubtful=picks.filter(p=>p.info.status!=='a');
+ const row=currentRows.find(r=>r.entry===id);
+ const block=(h,t)=>'<h3 style="font-size:27px;margin:24px 0 12px">'+esc(h)+'</h3><p>'+esc(t)+'</p>';
+ let html=block('Staðan',row.player_name+' er í '+(currentRows.indexOf(row)+1)+'. sæti með '+row.total+' stig.');
+ html+=block('Fyrirliðaráð',captain?'Núverandi fyrirliði: '+captain.info.web_name+'. '+(form?'Hæsta formtalan í hópnum er hjá '+form.info.web_name+'. Berðu þá saman ásamt næstu mótherjum.':'Skoðaðu mótherja og leikmínútur.'):'Fyrirliði fannst ekki í gögnunum.');
+ html+=block('Þátttökuviðvaranir',doubtful.length?doubtful.map(p=>p.info.web_name+': '+(p.info.news||'óvissa um þátttöku')).join('; '):'Engar skráðar þátttökuviðvaranir hjá þessum leikmönnum.');
+ html+=block('Fyrir næstu umferð','Skoðaðu form, næstu mótherja og væntanlegar mínútur áður en þú notar frjáls skipti. Þessi ráð byggja á FPL-gögnum en eru ekki trygging fyrir stigum.');
+ out.innerHTML=html;
+ }catch(e){out.textContent='Gat ekki sótt ráð. Reyndu aftur síðar.'}
+}
+$('#adviceButton').addEventListener('click',getAdvice);
+
+function playerPortraits(text){
+ const boot=window.fplBoot;
+ if(!boot||!boot.elements)return '';
+ const words=String(text).toLocaleLowerCase('is');
+ const matches=boot.elements.filter(p=>{
+  const n=(p.web_name||'').toLocaleLowerCase('is');
+  const full=(p.first_name+' '+p.second_name).toLocaleLowerCase('is');
+  return n.length>3&&(words.includes(n)||words.includes(full));
+ }).slice(0,3);
+ if(!matches.length)return '';
+ return '<div class="player-portraits">'+matches.map(p=>{
+  const photo=String(p.code||p.photo||'').replace(/\.(jpg|png)$/i,'');
+  if(!/^[0-9]+$/.test(photo))return '';
+  return '<div class="player-portrait"><img loading="lazy" src="https://resources.premierleague.com/premierleague/photos/players/110x140/p'+photo+'.png" alt="'+esc(p.web_name)+'" onerror="this.closest(\'.player-portrait\').style.display=\'none\'"><span>'+esc(p.web_name)+'</span></div>';
+ }).join('')+'</div>';
+}
+function showShame(){
+ const pictures=[
+ 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=85',
+ 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=900&q=85',
+ 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=900&q=85',
+ 'https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=900&q=85'
+ ];
+ const selected=[gw6Stories[0],gw6Stories[1],gw6Stories[2],gw6Stories[5]];
+ $('#shameGrid').innerHTML=selected.map((x,i)=>'<article class="shame-card"><img loading="lazy" src="'+pictures[i]+'" alt="Fótboltamynd"><div><span class="power-rank-tag">GW 6 · '+esc(x[0])+'</span><h3>'+esc(x[1])+'</h3>'+paragraphs(x[2])+'</div></article>').join('');
+}
+function showExtras(stories,gw){
+ const worst=stories.find(x=>x[0].includes('SKÍTA'))||stories[0];
+ const trade=stories.find(x=>x[0].includes('VIÐSKIPT'));
+ const q1='Hvað var planið fyrir þessa umferð?';
+ const q2='Hefurðu einhverja skýringu á þessu?';
+ const interview='<div class="eyebrow">SKÁLDAÐUR BLAÐAMANNAFUNDUR · GW '+gw+'</div><h3>'+esc(worst[1])+' MÆTIR Í PRESSUNA</h3><p><strong>Blaðamaður:</strong> '+q1+'</p><p><strong>Stjórinn:</strong> „Planið var að fá fleiri stig. Það tókst ekki alveg.“</p><p><strong>Blaðamaður:</strong> '+q2+'</p><p><strong>Stjórinn:</strong> „Ég bið fólk að virða einkalíf mitt á þessum erfiða tíma.“</p><small class="muted">Tilbúin gamanviðtöl, ekki raunverulegar tilvitnanir.</small>';
+ const transfer=trade?'<div class="eyebrow">TRANSFER CRIME SCENE · GW '+gw+'</div><h3>'+esc(trade[1])+'</h3>'+paragraphs(trade[2]):'<div class="eyebrow">TRANSFER CRIME SCENE · GW '+gw+'</div><h3>ENGIN SAKARGIFT</h3><p>Engin staðfest leikmannaskipti til að rannsaka þessa umferð.</p>';
+ $('#reportExtras').innerHTML='<article class="extra-card"><img loading="lazy" src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=900&q=85" alt="Blaðamannafundur"><div>'+interview+'</div></article><article class="extra-card"><img loading="lazy" src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=900&q=85" alt="Fótbolti"><div>'+transfer+'</div></article>';
+}
+async function showPowerRankings(gw){
+ const rounds=[gw,gw-1,gw-2].filter(n=>n>0);
+ const records=await Promise.all(currentRows.map(async row=>{
+  const scores=await Promise.allSettled(rounds.map(n=>json('/api/fpl?type=entry&entry='+row.entry+'&event='+n)));
+  const valid=scores.filter(r=>r.status==='fulfilled'&&Number.isFinite(r.value.entry_history?.points));
+  return {row,points:valid.reduce((a,r)=>a+r.value.entry_history.points,0),games:valid.length};
+ }));
+ const eligible=records.filter(x=>x.games===rounds.length);
+ eligible.sort((a,b)=>b.points-a.points||b.row.total-a.row.total);
+ $('#powerList').innerHTML=eligible.length?eligible.map((x,i)=>'<div class="power-row"><div class="power-num">'+(i+1)+'</div><div><strong>'+esc(x.row.player_name)+'</strong><small>'+esc(x.row.entry_name)+' · GW '+rounds.at(-1)+'–'+gw+'</small></div><div class="power-points">'+x.points+'<small>stig / '+rounds.length+' GW</small></div></div>').join(''):'<div class="status">Ekki tókst að sækja samanburðarhæf stig fyrir síðustu umferðir.</div>';
+}
+
+/* Three new FPL data experiences. Never invent incomplete historical comparisons. */
+const analysisCache=new Map();
+function cachedFpl(url){if(!analysisCache.has(url))analysisCache.set(url,json(url).catch(e=>{analysisCache.delete(url);throw e}));return analysisCache.get(url)}
+const eventPick=(id,gw)=>cachedFpl('/api/fpl?type=entry&entry='+encodeURIComponent(id)+'&event='+gw);
+const eventHistory=id=>cachedFpl('/api/fpl?type=history&entry='+encodeURIComponent(id));
+const seasonTransfers=id=>cachedFpl('/api/fpl?type=transfers&entry='+encodeURIComponent(id));
+const fullEvent=gw=>cachedFpl('/api/fpl?type=live&event='+gw);
+function pointLookup(data){return new Map((Array.isArray(data.elements)?data.elements:Object.values(data.elements||{})).map(p=>[p.id,Number(p.stats?.total_points||0)]))}
+function statusMessage(id,message){$(id).textContent=message}
+async function loadNewFeatures(gw){
+ const boot=window.fplBoot||{},completed=(boot.events||[]).filter(x=>x.finished&&x.data_checked&&x.id<=gw).map(x=>x.id).sort((a,b)=>a-b);
+ if(!completed.length){['#rivalryStatus','#transferStatus','#wrappedStatus'].forEach(x=>statusMessage(x,'Bíð eftir fullstaðfestri umferð frá FPL.'));return}
+ const latest=completed.at(-1);
+ await Promise.allSettled([renderRivalry(latest),renderTransferShame(completed),prepareWrapped(completed)]);
+}
+async function renderRivalry(gw){
+ const board=$('#rivalryBoard');
+ try{
+  const prev=gw-1,rows=[...currentRows],historic=prev>0?await Promise.allSettled(rows.map(r=>eventHistory(r.entry))):[];
+  const prior=rows.map((r,i)=>{
+    const h=historic[i];if(!h||h.status!=='fulfilled')return null;
+    const rec=(h.value.current||[]).find(x=>x.event===prev);
+    return rec&&Number.isFinite(rec.total_points)?{entry:r.entry,total:rec.total_points}:null;
+  }).filter(Boolean).sort((a,b)=>b.total-a.total);
+  const rank=new Map(prior.map((r,i)=>[r.entry,i+1]));
+  board.innerHTML=rows.map((r,i)=>{
+   const before=rank.get(r.entry),move=before==null?'óþekkt':before===i+1?'↔ óbreytt':before>i+1?'▲ '+(before-i-1)+' sæti':'▼ '+(i+1-before)+' sæti';
+   const above=i?rows[i-1]:null,below=rows[i+1]||null;
+   const gap=above?Number(above.total)-Number(r.total):0;
+   const next=below?Number(r.total)-Number(below.total):0;
+   return '<article class="power-row"><div class="power-num">'+(i+1)+'</div><div><strong>'+esc(r.player_name)+'</strong><small>'+esc(r.entry_name)+' · '+esc(move)+'</small><div class="rival-micro">'+(above?'Elta: '+esc(above.player_name)+' · '+gap+' stig á eftir':'👑 Leiðir deildina')+' · '+(below?'Forskot á '+esc(below.player_name)+': '+next+' stig':'Enginn á eftir')+'</div></div><div class="power-points">'+Number(r.total)+'<small>heildarstig</small></div></article>'
+  }).join('');
+  statusMessage('#rivalryStatus','Staðan núna · sætabreyting frá lokum GW '+prev+'. '+(prior.length===rows.length?'Allir stjórar með samanburðargögn.':'Sætisbreytingar sýndar sem óþekktar þar sem söguleg gögn vantar.'));
+ }catch(e){board.innerHTML='';statusMessage('#rivalryStatus','Náði ekki sætisbreytingum. Prófaðu að endurhlaða.')}
+}
+async function renderTransferShame(rounds){
+ const board=$('#transferBoard'),confirmed=new Set(rounds);
+ try{
+  const boot=window.fplBoot||{},players=new Map((boot.elements||[]).map(p=>[p.id,p.web_name]));
+  const transfers=await Promise.allSettled(currentRows.map(r=>seasonTransfers(r.entry)));
+  const all=transfers.flatMap((res,i)=>res.status==='fulfilled'&&Array.isArray(res.value)?res.value.filter(t=>confirmed.has(t.event)).map(t=>({...t,manager:currentRows[i].player_name})):[]);
+  const events=[...new Set(all.map(t=>t.event))],liveResults=await Promise.allSettled(events.map(g=>fullEvent(g)));
+  const maps=new Map(events.flatMap((gw,i)=>liveResults[i].status==='fulfilled'?[[gw,pointLookup(liveResults[i].value)]]:[]));
+  const scored=all.filter(t=>maps.has(t.event)).map(t=>{const p=maps.get(t.event),out=Number(p.get(t.element_out)||0),incoming=Number(p.get(t.element_in)||0);return {...t,out,incoming,diff:incoming-out}});
+  scored.sort((a,b)=>a.diff-b.diff);
+  if(!scored.length){board.innerHTML='';statusMessage('#transferStatus','Engin samanburðarhæf skipti fundust fyrir staðfestar umferðir.');return}
+  board.innerHTML=scored.slice(0,12).map((t,i)=>'<article class="power-row"><div class="power-num">'+(i+1)+'</div><div><strong>'+esc(t.manager)+'</strong><small>GW '+t.event+' · '+esc(players.get(t.element_out)||'Leikmaður '+t.element_out)+' ('+t.out+') út → '+esc(players.get(t.element_in)||'Leikmaður '+t.element_in)+' ('+t.incoming+') inn</small><div class="rival-micro">'+(t.diff<0?'Djöfulsins sala. Skiptin fóru strax í mínus.':t.diff===0?'Jafntefli í hrástigum. Engin sekt í þetta skiptið.':'Þetta voru reyndar plúsviðskipti.')+'</div></div><div class="power-points">'+(t.diff>0?'+':'')+t.diff+'<small>hrástigamunur</small></div></article>').join('');
+  statusMessage('#transferStatus','Raðað eftir hrástigamun leikmanns inn og út í sömu GW, ekki eftir nettótapi eða framtíðarvirði. Frjáls skipti, chip og stigahögg eru ekki metin.');
+ }catch(e){board.innerHTML='';statusMessage('#transferStatus','Gat ekki sótt skiptasögu. Engar niðurstöður tilbúnar.')}
+}
+let wrappedRounds=[];
+async function prepareWrapped(rounds){wrappedRounds=rounds;statusMessage('#wrappedStatus','Veldu stjóra til að fá persónulegt uppgjör fyrir GW '+rounds[0]+'–'+rounds.at(-1)+'.')}
+$('#wrappedTeam').addEventListener('change',async()=>{
+ const id=Number($('#wrappedTeam').value),board=$('#wrappedBoard');board.innerHTML='';
+ if(!id){statusMessage('#wrappedStatus','Veldu stjóra fyrst.');return}
+ statusMessage('#wrappedStatus','Sæki persónulegt uppgjör…');
+ try{
+  const row=currentRows.find(r=>Number(r.entry)===id),history=await eventHistory(id);
+  const seasons=(history.current||[]).filter(x=>wrappedRounds.includes(x.event)&&Number.isFinite(x.points));
+  const minGames=seasons.length;if(!minGames)throw Error('No event history');
+  const top=[...seasons].sort((a,b)=>b.points-a.points)[0],low=[...seasons].sort((a,b)=>a.points-b.points)[0];
+  const avg=seasons.reduce((n,x)=>n+x.points,0)/minGames;
+  const bench=seasons.reduce((n,x)=>n+Number(x.points_on_bench||0),0);
+  const transfers=seasons.reduce((n,x)=>n+Number(x.event_transfers||0),0);
+  const hits=seasons.reduce((n,x)=>n+Math.abs(Math.min(0,Number(x.event_transfers_cost||0))),0);
+  const title=avg>=70?'FOKKING VÉLIN':avg>=55?'STÖÐUGI DÓMARINN':avg>=40?'RÓLLERKÓSTERINN':'SKAÐABÓTAKRÖFAN';
+  board.innerHTML='<div class="wrapped-title"><span>FANTASY WRAPPED · '+esc(row.player_name)+'</span><h3>'+title+'</h3><p>'+esc(row.entry_name)+' · '+minGames+' staðfestar umferðir. Engin tónlistargjöld, bara dómur.</p></div><div class="wrapped-stats">'+[
+   ['Meðalstig',avg.toFixed(1).replace('.',',')],['Besta umferð',top.points+' · GW '+top.event],['Versta umferð',low.points+' · GW '+low.event],['Stig á bekk',bench],['Skipti',transfers],['Stigahögg',hits]
+  ].map(([k,v])=>'<div class="stat-tile"><small>'+esc(k)+'</small><strong>'+esc(v)+'</strong></div>').join('')+'</div><p class="wrapped-verdict">'+(avg>=70?'Þetta er Champions League-stefið í mannslíki. Hinir eru enn í upphitun.':avg>=55?'Ekki alltaf flugeldar, en nógu stöðugt til að hinir séu farnir að kíkja á liðið þitt.':avg>=40?'Þetta er eins og Netflix-sería þar sem enginn veit hvort næsti þáttur verði snilld eða algjört helvítis klúður.':'Mætti með drauma og fór heim með reikninginn. Roy Keane hefði slökkt á sjónvarpinu.')+'</p>';
+  statusMessage('#wrappedStatus','Persónuleg samantekt úr FPL. Bekkjarstig eru ekki sjálfkrafa töpuð stig. Stigahögg birt samkvæmt skráðri sögu.');
+ }catch(e){statusMessage('#wrappedStatus','Vantar heildstæð söguleg gögn fyrir þennan stjóra.');board.innerHTML=''}
+});
+
+start();
+</script></body></html>
